@@ -1,0 +1,108 @@
+.game {
+    width: 600px;
+    height: 200px;
+    border-bottom: 1px solid #000;
+    margin: auto;
+}
+#cloud {
+    width: 40px;
+    height: 20px;
+    background-image: url(img/cloud.png);
+    background-size: 40px 20px;
+    position: relative;
+    top: -10px;
+    left: 500px;
+    animation: cloud 6s infinite linear;
+}
+@keyframes cloud {
+    0% {
+        left: 500px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+#dino {
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+    animation-timing-function: steps(1, end);
+}
+#dinoStep {
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    position: relative;
+
+    animation-name: step;
+    animation-duration: 0.25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(50, end);
+}
+@keyframes step {
+    0% {
+        background-image: url(img/dinoL.png);
+    }
+
+    100% {
+        background-image: url(img/dinoR.png);
+    }
+}
+#cactus {
+    width: 20px;
+    height: 40px;
+    background-image: url(img/cactus.png);
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: cactusMov 1.5s infinite linear;
+}
+@keyframes cactusMov {
+    0% {
+        left: 580px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+.jump {
+    animation: jump 0.25s linear;
+}
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+    10% {
+        top: 140px;
+    }
+    20% {
+        top: 120px;
+    }
+    30% {
+        top: 100px;
+    }
+    40% {
+        top: 80px;
+    }
+    50% {
+        top: 60px;
+    }
+    60% {
+        top: 80px;
+    }
+    70% {
+        top: 100px;
+    }
+    80% {
+        top: 120px;
+    }
+    90% {
+        top: 140px;
+    }
+    100% {
+        top: 150px;
+    }
+}
